@@ -170,7 +170,8 @@
                             border: none;
                             height: 40px;
                             padding: 5px;
-                            vertical-align: middle;
+                            display: flex;
+                            align-items: center;
                             cursor: pointer;
                         }
                     }
