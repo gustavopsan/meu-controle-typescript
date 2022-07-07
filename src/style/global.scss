@@ -1,0 +1,29 @@
+body {
+    background-color: #404564;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../assets/fonts/Montserrat/Montserrat.ttf");
+}
+
+@font-face {
+    font-family: 'Montserrat Italic';
+    src: url("../assets/fonts/Montserrat/Montserrat-Italic.ttf");
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url("../assets/fonts/Mulish/Mulish.ttf");
+}
+
+@font-face {
+    font-family: 'Mulish Italic';
+    src: url("../assets/fonts/Mulish/Mulish-Italic.ttf");
+}
