@@ -1,25 +1,24 @@
-.login-wrapper {
+.register-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 410px;
-    height: 520px;
+    height: fit-content;
     background: #FFFFFF;
     border: 1px solid #DFE0EB;
     border-radius: 8px;
 
     @media (max-width: 425px) {
-        width: 80vw;
-        height: 73vh;
+        width: 85vw;
+        height: fit-content;
         border: none;
-        max-height: 480px;
         min-height: 460px;
     }
 
-    .login-header {
-        padding: 30px;
+    .register-header {
+        padding: 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -48,8 +47,8 @@
         }
     }
 
-    .login-content {
-        .login-content-header {
+    .register-content {
+        .register-content-header {
             h3 {
                 font-family: 'Mulish';
                 font-style: normal;
@@ -74,10 +73,10 @@
             }
         }
 
-        .login-content-body {
+        .register-content-body {
             padding-top: 4vh;
 
-            .form-login {
+            .form-register {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -145,7 +144,7 @@
                         opacity: 0.4;
                     }
 
-                    button:not(.show-password) {
+                    button {
                         background: #202541;
                         padding: 14px 24px;
                         box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
@@ -160,23 +159,37 @@
                         letter-spacing: 0.2px;
                         color: #FFFFFF;
                     }
-
-                    .password-wrapper {
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-
-                        button.show-password {
-                            background-color: transparent;
-                            border: none;
-                            height: 40px;
-                            padding: 5px;
-                            display: flex;
-                            align-items: center;
-                            cursor: pointer;
-                        }
-                    }
                 }
+            }
+        }
+
+        .register-content-footer {
+            padding: 10px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            span {
+                font-family: 'Mulish';
+                font-style: normal;
+                font-variation-settings: 'wght' 400;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+                letter-spacing: 0.3px;
+                color: #404564;
+            }
+
+            a {
+                font-family: 'Mulish';
+                font-style: normal;
+                font-variation-settings: 'wght' 600;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+                letter-spacing: 0.2px;
+                color: #393A42;
+                text-decoration: none;
             }
         }
     }

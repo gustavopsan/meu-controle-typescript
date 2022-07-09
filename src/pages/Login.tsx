@@ -16,7 +16,7 @@ const Login = () => {
     <React.Fragment>
         <section className="login-wrapper">
             <div className="login-header">
-                <img src={Logo} alt="Logo Meu Controle" />
+                <img src={Logo} width="48px" height="48px" alt="Logo Meu Controle"/>
                 <h2 className="logo-text">meucontrole</h2>
                 <h2 className="logo-text-2">Dashboard</h2>
             </div>
@@ -39,7 +39,7 @@ const Login = () => {
                             <div className="password-wrapper">
                               <input type={showPassword ? "text" : "password"} className="form-control" id="password" placeholder="********" />
                               <button type="button" className="show-password" onClick={togglePassword}>
-                                <img src={showPassword ? showPass : hidePass} alt="Mostrar/Ocultar Senha" />
+                                <img src={showPassword ? showPass : hidePass} alt="Mostrar/Ocultar Senha" width="24px" height="24px"/>
                               </button>
                               
                             </div>
