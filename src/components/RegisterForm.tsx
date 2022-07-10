@@ -16,7 +16,7 @@ const RegisterForm = () => {
                 <input type="password" className="form-control" id="password" placeholder="********" />
             </div>
             <div className="form-group">
-                <label htmlFor="passwordConfirm">Senha</label>
+                <label htmlFor="passwordConfirm">Confirmar senha</label>
                 <input type="password" className="form-control" id="passwordConfirm" placeholder="********" />
             </div>
             <div className="form-group">
