@@ -1,0 +1,57 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #E6E6E6;
+  max-height: 60px;
+
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .header-content-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+
+      img {
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+
+      .user-info-name {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+        align-items: center;
+
+        .name {
+          font-family: 'Roboto Medium';
+          font-style: normal;
+          font-size: 13px;
+          line-height: 20px;
+          color: #000000;
+        }
+
+        .subscription-type {
+          font-family: 'Roboto Regular';
+          font-style: normal;
+          font-size: 13px;
+          line-height: 20px;
+          color: #545454;
+        }
+      }
+    }
+  }
+}
