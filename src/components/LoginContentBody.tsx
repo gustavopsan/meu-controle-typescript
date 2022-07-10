@@ -8,11 +8,9 @@ interface ContentProps {
 
 const LoginContentBody = (props:ContentProps) => {
     return (
-        <React.Fragment>
-            <div className="login-content-body">
-                {props.children}
-            </div>
-        </React.Fragment>
+        <div className="login-content-body">
+            {props.children}
+        </div>
     )
 }
 
