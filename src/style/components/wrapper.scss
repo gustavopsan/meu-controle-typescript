@@ -1,0 +1,20 @@
+.login-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 410px;
+    height: 520px;
+    background: #FFFFFF;
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+
+    @media (max-width: 425px) {
+        width: 80vw;
+        height: 73vh;
+        border: none;
+        max-height: 480px;
+        min-height: 460px;
+    }
+}

@@ -2,6 +2,8 @@ import React from 'react';
 
 import MyRoutes from './Routes';
 
+import "./style/global.scss";
+
 function App() {
   return (
     <MyRoutes />

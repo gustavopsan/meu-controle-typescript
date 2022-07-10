@@ -1,0 +1,29 @@
+.login-header {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        height: 48px;
+    }
+
+    .logo-text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-variation-settings: 'wght' 700;
+        font-size: 20px;
+        line-height: 20px;
+        color: #060606;
+    }
+
+    .logo-text-2 {
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 24px;
+        letter-spacing: 0.4px;
+        color: #A4A6B3;
+    }
+}
