@@ -4,7 +4,6 @@ import LoginContentBody from "../components/LoginContentBody";
 import LoginContentHeader from "../components/LoginContentHeader";
 import LoginForm from "../components/LoginForm";
 import LoginHeader from "../components/LoginHeader";
-
 import Wrapper from "../components/Wrapper";
 
 const Login = () => {

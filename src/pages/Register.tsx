@@ -1,6 +1,6 @@
 import React from "react";
-import LoginContentBody from "../components/LoginContentBody";
 
+import LoginContentBody from "../components/LoginContentBody";
 import LoginHeader from "../components/LoginHeader";
 import RegisterContentHeader from "../components/RegisterContentHeader";
 import RegisterFooter from "../components/RegisterFooter";
