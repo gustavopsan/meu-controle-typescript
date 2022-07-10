@@ -2,7 +2,7 @@ import "../style/components/registerForm.scss";
 
 const RegisterForm = () => {
     return(
-        <form className="form-register">
+        <form className="form-register" autoComplete="off">
             <div className="form-group">
                 <label htmlFor="email">Nome</label>
                 <input type="text" className="form-control" id="name" placeholder="Gustavo" />

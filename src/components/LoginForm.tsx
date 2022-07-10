@@ -10,7 +10,7 @@ interface FormProps {
 
 const LoginForm = (props:FormProps) => {
     return (
-        <form className="form-login">
+        <form className="form-login" autoComplete="off">
             <div className="form-group">
                 <label htmlFor="email">E-mail</label>
                 <input type="email" className="form-control" id="email" placeholder="example@meucontrole.com.br" />
