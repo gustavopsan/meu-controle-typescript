@@ -49,6 +49,8 @@
             .aside-menu-list {
                 li {
                     padding: 15px 13px;
+                    display: flex;
+                    flex-direction: column;
 
                     &:hover {
                         background-color: #2F3A5A;
