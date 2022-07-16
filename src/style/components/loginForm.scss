@@ -101,4 +101,27 @@ body {
             }
         }
     }
+
+    .form-group.message {
+        border-radius: 7px;
+        align-items: center;
+        text-align: center;
+        display: none;
+        padding: 5px;
+
+        &.error {
+            background-color: #db6d6d;
+        }
+
+        span {
+            font-family: "Mulish";
+            font-style: normal;
+            font-variation-settings: "wght" 400;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 0.3px;
+            color: #000000;
+        }
+    }
 }
