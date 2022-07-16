@@ -1,6 +1,7 @@
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 export interface IAuthenticateData {
     email: string;
     password: string;

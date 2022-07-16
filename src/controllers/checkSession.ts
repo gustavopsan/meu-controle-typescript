@@ -1,6 +1,8 @@
 import { getCookies, removeCookies } from "./authenticate";
 import axios from "axios";
 
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+
 const APIPATH = 'https://meu-controle-node.herokuapp.com';
 //const APIPATH = "http://localhost:4000";
 

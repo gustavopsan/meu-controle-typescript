@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+
 export interface ICreateUserData {
     name: string;
     email: string;
