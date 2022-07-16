@@ -1,3 +1,5 @@
+import { removeCookies } from '../controllers/authenticate';
+
 import iconExit from '../assets/img/exit-icon.svg';
 import iconEdit from '../assets/img/edit-icon.svg';
 
@@ -8,6 +10,13 @@ interface ProfileMenuProps {
 }
 
 const ProfileMenu = (props:ProfileMenuProps) => {
+
+    const handleLogout = () => {
+        removeCookies("token");
+        removeCookies("userId");
+        window.location.href = "/login";
+    }
+
     return (
         <div className={props.isOpen ? "profile-menu-container open" : "profile-menu-container"}>
             <div className="profile-menu-content">
@@ -19,7 +28,7 @@ const ProfileMenu = (props:ProfileMenuProps) => {
                         </button>
                     </li>
                     <li className="profile-menu-item">
-                        <button className="menu-button">
+                        <button className="menu-button" onClick={handleLogout}>
                             <img src={iconExit} alt="exit-menu" />
                             <b>Sair</b>
                         </button>

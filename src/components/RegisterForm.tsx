@@ -10,8 +10,6 @@ const RegisterForm = () => {
     const [password, setPassword] = useState("");
     const [passwordConfirm, setPasswordConfirm] = useState("");
 
-    const [error, setError] = useState("");
-
     function handleNameChange(event: React.ChangeEvent<HTMLInputElement>) {
         setName(event.target.value);
     }

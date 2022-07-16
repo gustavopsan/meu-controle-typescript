@@ -20,7 +20,7 @@ window.addEventListener("load", async () => {
             }).catch((error:any) => {
                 removeCookies("token");
                 removeCookies("userId");
-                window.location.href = "/";
+                window.location.href = "/login";
             })
         } else {
             window.location.href = "/login";
