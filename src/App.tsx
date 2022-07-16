@@ -1,4 +1,3 @@
-import "./controllers/checkSession";
 import MyRoutes from './Routes';
 
 import "./style/global.scss";
