@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-
 export interface ICreateUserData {
     name: string;
     email: string;
@@ -22,6 +20,11 @@ export async function createUser(props:ICreateUserData) {
         password: password,
         confirmPassword: confirmPassword,
         subscriptionType: subscriptionType
+    }, 
+    { 
+        Headers: { 
+            'Access-Control-Allow-Origin': '*' 
+        } 
     });
 
     return response.data;
