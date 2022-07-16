@@ -14,7 +14,7 @@ export interface ICookieData {
 export async function authenticate(props:IAuthenticateData) {
     const { email, password } = props;
 
-    const APIPATH = 'http://api.meucontrole.gustavopsantana.dev.br';
+    const APIPATH = 'https://meu-controle-node.herokuapp.com';
     //const APIPATH = 'http://localhost:4000';
 
     const response = await axios.post(`${APIPATH}/authenticate`, {

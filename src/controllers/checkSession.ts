@@ -1,7 +1,7 @@
 import { getCookies, removeCookies } from "./authenticate";
 import axios from "axios";
 
-const APIPATH = 'http://api.meucontrole.gustavopsantana.dev.br';
+const APIPATH = 'https://meu-controle-node.herokuapp.com';
 //const APIPATH = "http://localhost:4000";
 
 window.addEventListener("load", async () => {
