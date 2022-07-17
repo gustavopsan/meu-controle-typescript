@@ -53,41 +53,42 @@ const RegisterForm = () => {
                 messageContainer.style.display = "flex";
                 
                 setTimeout(window.location.href = "/login", 3000);
+            } else{
+                let errorId = response.errorId;
+
+                if (errorId === 1) {
+                    let messageText = "Suas senhas não conferem. Favor revisar e tentar novamente!";
+                    messageElement.innerHTML = messageText;
+                    messageContainer.classList.add("error");
+                    messageContainer.style.display = "flex";
+                    
+                    setTimeout(hideError, 5000);
+                } else if (errorId === 2) {
+                    let messageText = "Endereço de e-mail inválido. Favor revisar e tentar novamente!";
+                    messageElement.innerHTML = messageText;
+                    messageContainer.classList.add("error");
+                    messageContainer.style.display = "flex";
+                    
+                    setTimeout(hideError, 5000);
+                } else if (errorId === 3) {
+                    let messageText = "Senha inválida. Favor revisar e tentar novamente!";
+                    messageElement.innerHTML = messageText;
+                    messageContainer.classList.add("error");
+                    messageContainer.style.display = "flex";
+                    
+                    setTimeout(hideError, 5000);
+                } else if (errorId === 4) {
+                    let messageText = "Endereço de e-mail já registrado. Favor tentar com um novo endereço!";
+                    messageElement.innerHTML = messageText;
+                    messageContainer.classList.add("error");
+                    messageContainer.style.display = "flex";
+                    
+                    setTimeout(hideError, 5000);
+                }
             }
             
         }).catch(error => {
-            let errorData = error.response.data;
-            console.log(errorData)
-            
-            if (errorData.errorId === 1) {
-                let messageText = "Suas senhas não conferem. Favor revisar e tentar novamente!";
-                messageElement.innerHTML = messageText;
-                messageContainer.classList.add("error");
-                messageContainer.style.display = "flex";
-                
-                setTimeout(hideError, 5000);
-            } else if (errorData.errorId === 2) {
-                let messageText = "Endereço de e-mail inválido. Favor revisar e tentar novamente!";
-                messageElement.innerHTML = messageText;
-                messageContainer.classList.add("error");
-                messageContainer.style.display = "flex";
-                
-                setTimeout(hideError, 5000);
-            } else if (errorData.errorId === 3) {
-                let messageText = "Senha inválida. Favor revisar e tentar novamente!";
-                messageElement.innerHTML = messageText;
-                messageContainer.classList.add("error");
-                messageContainer.style.display = "flex";
-                
-                setTimeout(hideError, 5000);
-            } else if (errorData.errorId === 4) {
-                let messageText = "Endereço de e-mail já registrado. Favor tentar com um novo endereço!";
-                messageElement.innerHTML = messageText;
-                messageContainer.classList.add("error");
-                messageContainer.style.display = "flex";
-                
-                setTimeout(hideError, 5000);
-            }
+            console.log(error);
         })
     }
 

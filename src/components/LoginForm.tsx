@@ -54,13 +54,14 @@ const LoginForm = (props:FormProps) => {
                 setCookies(cookieToken);
 
                 window.location.href = "/";
+            } else {
+                messageElement.innerText = "E-mail ou senha inválidos! Revise os dados e tente novamente.";
+                messageContainer.classList.add("error");
+                messageContainer.style.display = "block";
+                setTimeout(hideError, 3000);
             }
         }).catch(error => {
-            console.log(error.response.data);
-            messageElement.innerText = "E-mail ou senha inválidos! Revise os dados e tente novamente.";
-            messageContainer.classList.add("error");
-            messageContainer.style.display = "block";
-            setTimeout(hideError, 3000);
+            console.log(error);
         })
     }
 
