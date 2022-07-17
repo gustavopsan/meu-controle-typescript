@@ -22,9 +22,10 @@ export async function createUser(props:ICreateUserData) {
         subscriptionType: subscriptionType
     }, 
     { 
-        Headers: { 
-            'Access-Control-Allow-Origin': '*' 
-        } 
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+        }
     });
 
     return response.data;

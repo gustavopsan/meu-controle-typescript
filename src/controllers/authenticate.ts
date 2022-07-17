@@ -21,9 +21,11 @@ export async function authenticate(props:IAuthenticateData) {
         password: password
     }, 
     { 
-        Headers: { 
-            'Access-Control-Allow-Origin': '*' 
-        } 
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+          },
+       
     });
 
     return response.data;

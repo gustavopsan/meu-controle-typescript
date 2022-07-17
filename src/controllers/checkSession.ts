@@ -39,9 +39,10 @@ window.addEventListener("load", async () => {
                 token: token
             }, 
             { 
-                Headers: { 
-                    'Access-Control-Allow-Origin': '*' 
-                } 
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Content-Type': 'application/json',
+                  },
             });
             if (response.data.success) {
                 window.location.href = "/";
