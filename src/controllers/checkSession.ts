@@ -2,7 +2,7 @@ import { getCookies, removeCookies } from "./authenticate";
 import axios from "axios";
 
 const APIPATH = 'https://meu-controle-node.herokuapp.com';
-//const APIPATH = "http://localhost:4000";
+const DebugAPIPATH = "http://localhost:4000";
 
 window.addEventListener("load", async () => {
     const token = getCookies("token");

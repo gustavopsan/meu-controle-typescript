@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Gravatar from 'react-gravatar';
 import AsideMenu from './AsideMenu';
 import ProfileMenu from './ProfileMenu';
+import userData from '../controllers/loadUserData';
 
 import iconMenu from '../assets/img/menu.svg';
 import iconHelp from '../assets/img/help.svg';
@@ -17,9 +18,17 @@ const Header = () => {
     const [isOpenProfile, setIsOpenProfile] = useState(false);
     const toggleProfile = () => setIsOpenProfile(!isOpenProfile);
 
+    const user = userData;
+    const name = user.name;
+    const email = user.email;
+    const userId = user.userId;
+    const type = user.subscriptionType;
+
+    let userType = type === "free" ? "Assinante gratuito" : "Asinante premium";
+
     return(
         <React.Fragment>
-            <header className="header-container">
+            <header className="header-container" data-user-id={userId}>
                 <div className="header-content-left">
                     <button className="menu-button" onClick={toggleMenu}>
                         <img src={iconMenu} width="24px" height="24px" alt="menu-icon" />
@@ -34,11 +43,11 @@ const Header = () => {
                     </button>
                     <div className="user-info">
                         <div className="user-info-avatar">
-                            <Gravatar email="gustavopsantana4@gmail.com" className="avatar" alt="user-avatar" />
+                            <Gravatar email={email} className="avatar" alt="user-avatar" />
                         </div>
                         <div className="user-info-name">
-                            <span className="name">Gustavo P. Santana</span>
-                            <span className="subscription-type">Assinante gratuito</span>
+                            <span className="name">{name}</span>
+                            <span className="subscription-type">{userType}</span>
                         </div>
                         <button className="user-menu" onClick={toggleProfile}>
                             <img src={arrowDown} width="16px" height="16px" alt="menu-icon" />

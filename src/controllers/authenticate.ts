@@ -14,7 +14,7 @@ export async function authenticate(props:IAuthenticateData) {
     const { email, password } = props;
 
     const APIPATH = 'https://meu-controle-node.herokuapp.com';
-    //const APIPATH = 'http://localhost:4000';
+    const DebugAPIPATH = 'http://localhost:4000';
 
     const response = await axios.post(`${APIPATH}/authenticate`, {
         email: email,
