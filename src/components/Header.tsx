@@ -11,6 +11,13 @@ import arrowDown from '../assets/img/arrow-down.svg';
 
 import "../style/components/header.scss";
 
+interface userHeaderProps {
+    name: string;
+    email: string;
+    userId: string;
+    subscriptionType: string;
+}
+
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -18,17 +25,16 @@ const Header = () => {
     const [isOpenProfile, setIsOpenProfile] = useState(false);
     const toggleProfile = () => setIsOpenProfile(!isOpenProfile);
 
-    const user = userData;
-    const name = user.name;
-    const email = user.email;
-    const userId = user.userId;
-    const type = user.subscriptionType;
+    const [user, setUser] = useState({} as userHeaderProps);
 
-    let userType = type === "free" ? "Assinante gratuito" : "Asinante premium";
+    user.name = userData.name;
+    user.email = userData.email;
+    user.userId = userData.userId;
+    user.subscriptionType = userData.subscriptionType === "free" ? "Assinante gratuito" : "Asinante premium";
 
     return(
         <React.Fragment>
-            <header className="header-container" data-user-id={userId}>
+            <header className="header-container" data-user-id={user.userId}>
                 <div className="header-content-left">
                     <button className="menu-button" onClick={toggleMenu}>
                         <img src={iconMenu} width="24px" height="24px" alt="menu-icon" />
@@ -43,11 +49,11 @@ const Header = () => {
                     </button>
                     <div className="user-info">
                         <div className="user-info-avatar">
-                            <Gravatar email={email} className="avatar" alt="user-avatar" />
+                            <Gravatar email={user.email} className="avatar" alt="user-avatar" />
                         </div>
                         <div className="user-info-name">
-                            <span className="name">{name}</span>
-                            <span className="subscription-type">{userType}</span>
+                            <span className="name">{user.name}</span>
+                            <span className="subscription-type">{user.subscriptionType}</span>
                         </div>
                         <button className="user-menu" onClick={toggleProfile}>
                             <img src={arrowDown} width="16px" height="16px" alt="menu-icon" />
