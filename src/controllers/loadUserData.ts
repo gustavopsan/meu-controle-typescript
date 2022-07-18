@@ -6,7 +6,7 @@ const APIPATH = 'https://meu-controle-node.herokuapp.com';
 const DebugAPIPATH = "http://localhost:4000";
 var userData = {} as any;
 
-window.addEventListener("DOMContentLoaded", async () => {
+window.onload =  async () => {
     const response = await axios.post(`${APIPATH}/getUserData`, {
         userId: userId
     });
@@ -16,6 +16,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     userData.email = response.data.email;
     userData.subscriptionType = response.data.subscriptionType;
 
-})
+}
 
 export default userData;
