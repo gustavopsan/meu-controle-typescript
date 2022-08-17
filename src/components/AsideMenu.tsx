@@ -8,11 +8,18 @@ import todoIcon from '../assets/img/todo-icon.svg';
 import "../style/components/asideMenu.scss";
 
 interface AsideMenuProps {
+    selectedView: string;
+    setSelectedView: (view: string) => void;
     isOpen: boolean;
     toggleMenu: () => void;
 }
 
-const AsideMenu = (props:AsideMenuProps) => {
+export const AsideMenu = (props:AsideMenuProps) => {
+
+    function handleSelected(view:string) {
+        props.setSelectedView(view);
+        props.toggleMenu();
+    }
 
     return (
         <React.Fragment>
@@ -27,25 +34,25 @@ const AsideMenu = (props:AsideMenuProps) => {
                     <div className="aside-menu-content-body">
                         <ul className="aside-menu-list">
                             <li className="aside-menu-item">
-                                <a href="#" className="aside-menu-link">
+                                <a href="#" id="home" className="aside-menu-link" onClick={() => handleSelected("home")}>
                                     <img src={iconHome} alt="icon-home" />
                                     <b>Início</b>
                                 </a>
                             </li>
                             <li className="aside-menu-item">
-                                <a href="#" className="aside-menu-link">
+                                <a href="#" id="overview" className="aside-menu-link" onClick={() => handleSelected("overview")}>
                                     <img src={iconChart} alt="icon-chart" />
                                     <b>Visão Geral</b>
                                 </a>
                             </li>
                             <li className="aside-menu-item">
-                                <a href="#" className="aside-menu-link">
+                                <a href="#" id="reports" className="aside-menu-link" onClick={() => handleSelected("reports")}>
                                     <img src={reportIcon} alt="report-icon" />
                                     <b>Relatórios</b>
                                 </a>
                             </li>
                             <li className="aside-menu-item">
-                                <a href="#" className="aside-menu-link">
+                                <a href="#" id="todo" className="aside-menu-link" onClick={() => handleSelected("todo")}>
                                     <img src={todoIcon} alt="todo-icon" />
                                     <b>To Do</b>
                                 </a>
@@ -57,5 +64,3 @@ const AsideMenu = (props:AsideMenuProps) => {
         </React.Fragment>
     );
 }
-
-export default AsideMenu;

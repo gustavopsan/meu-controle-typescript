@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Gravatar from 'react-gravatar';
-import AsideMenu from './AsideMenu';
+import { AsideMenu } from './AsideMenu';
 import ProfileMenu from './ProfileMenu';
 import userData from '../controllers/loadUserData';
 
@@ -18,7 +18,12 @@ interface userHeaderProps {
     subscriptionType: string;
 }
 
-const Header = () => {
+interface HeaderProps {
+    selectedView: string;
+    setSelectedView: (view: string) => void;
+}
+
+const Header = (props:HeaderProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -61,7 +66,7 @@ const Header = () => {
                     </div>
                 </div>
             </header>
-            <AsideMenu isOpen={isOpen} toggleMenu={toggleMenu}/>
+            <AsideMenu isOpen={isOpen} toggleMenu={toggleMenu} selectedView={props.selectedView} setSelectedView={props.setSelectedView}/>
             <ProfileMenu isOpen={isOpenProfile}/>
         </React.Fragment>
     )
